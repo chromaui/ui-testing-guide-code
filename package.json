@@ -60,6 +60,11 @@
     "@storybook/manager-webpack5": "^6.5.3",
     "@storybook/node-logger": "^6.5.3",
     "@storybook/preset-create-react-app": "^4.1.0",
-    "@storybook/react": "^6.5.3"
+    "@storybook/react": "^6.5.3",
+    "msw": "^0.40.0",
+    "msw-storybook-addon": "^1.6.3"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
