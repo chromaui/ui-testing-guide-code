@@ -7,9 +7,12 @@ import {
   within,
   fireEvent,
 } from '@testing-library/react';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import { composeStories } from '@storybook/testing-react';
 import { getWorker } from 'msw-storybook-addon';
 import * as stories from './InboxScreen.stories';
+
+expect.extend(toHaveNoViolations);
 
 describe('InboxScreen', () => {
   afterEach(() => {
@@ -75,5 +78,16 @@ describe('InboxScreen', () => {
       target: { value: 'Fix bug in the textarea error state' },
     });
     expect(taskInput.value).toBe(updatedTaskName);
+  });
+
+  it('Should have no accessibility violations', async () => {
+    const { container, queryByText } = render(<Default />);
+
+    await waitFor(() => {
+      expect(queryByText('You have no tasks')).not.toBeInTheDocument();
+    });
+
+    const results = await axe(container);
+    expect(results).toHaveNoViolations();
   });
 });
