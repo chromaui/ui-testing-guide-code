@@ -80,6 +80,24 @@ describe('InboxScreen', () => {
     expect(taskInput.value).toBe(updatedTaskName);
   });
 
+  it('should delete a task', async () => {
+    const { queryByText, getByRole, getAllByRole } = render(<Default />);
+
+    await waitFor(() => {
+      expect(queryByText('You have no tasks')).not.toBeInTheDocument();
+    });
+
+    const getTask = () => getByRole('listitem', { name: 'Export logo' });
+
+    const deleteButton = within(getTask()).getByRole('button', {
+      name: 'delete',
+    });
+
+    fireEvent.click(deleteButton);
+
+    expect(getAllByRole('listitem').length).toBe(5);
+  });
+
   it('Should have no accessibility violations', async () => {
     const { container, queryByText } = render(<Default />);
 
