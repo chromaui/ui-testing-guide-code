@@ -7,6 +7,7 @@
     "@chakra-ui/react": "^1.6.0",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
+    "@storybook/testing-library": "^0.0.0-alpha.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -54,18 +55,19 @@
     ]
   },
   "devDependencies": {
-    "@storybook/addon-a11y": "^6.3.5",
-    "@storybook/addon-actions": "^6.2.9",
-    "@storybook/addon-essentials": "^6.2.9",
-    "@storybook/addon-links": "^6.2.9",
-    "@storybook/node-logger": "^6.2.9",
-    "@storybook/preset-create-react-app": "^3.1.7",
-    "@storybook/react": "^6.2.9",
-    "@storybook/testing-react": "^0.0.18",
+    "@storybook/addon-a11y": "^6.4.0-beta.3",
+    "@storybook/addon-actions": "^6.4.0-beta.3",
+    "@storybook/addon-essentials": "^6.4.0-beta.3",
+    "@storybook/addon-links": "^6.4.0-beta.3",
+    "@storybook/node-logger": "^6.4.0-beta.3",
+    "@storybook/preset-create-react-app": "^4.0.0",
+    "@storybook/react": "^6.4.0-beta.3",
+    "@storybook/testing-react": "^1.0.0-next.0",
     "cypress": "^8.2.0",
     "jest-axe": "^5.0.1",
     "msw": "^0.32.0",
-    "msw-storybook-addon": "^1.2.0"
+    "msw-storybook-addon": "^1.3.0",
+    "react-refresh": "^0.10.0"
   },
   "msw": {
     "workerDirectory": "public"
