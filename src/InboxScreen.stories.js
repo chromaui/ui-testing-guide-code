@@ -23,29 +23,42 @@ export const Default = {
       }),
     ],
   },
-};
-
-export const PinATask = {
-  ...Default,
   play: async () => {
     await waitFor(() => {
       expect(queryByText('You have no tasks')).not.toBeInTheDocument();
     });
 
-    const getTask = () => getByRole('listitem', { name: 'Export logo' });
+    const getTask = (name) => getByRole('listitem', { name });
 
-    const pinButton = within(getTask()).getByRole('button', { name: 'pin' });
-
+    // Pin
+    const pinButton = within(getTask('Export logo')).getByRole('button', {
+      name: 'pin',
+    });
     fireEvent.click(pinButton);
+
+    // Archive
+    const archiveCheckbox = within(getTask('QA dropdown')).getByRole(
+      'checkbox'
+    );
+    fireEvent.click(archiveCheckbox);
+
+    // Edit
+    const taskInput = within(getTask('Fix bug in input error state')).getByRole(
+      'textbox'
+    );
+    fireEvent.change(taskInput, {
+      target: { value: 'Fix bug in the textarea error state' },
+    });
+
+    // Delete
+    const deleteButton = within(getTask('Build a date picker')).getByRole(
+      'button',
+      {
+        name: 'delete',
+      }
+    );
+    fireEvent.click(deleteButton);
   },
-};
-
-export const ArchiveATask = {
-  args: {},
-};
-
-export const DeleteATask = {
-  args: {},
 };
 
 export const Error = {
