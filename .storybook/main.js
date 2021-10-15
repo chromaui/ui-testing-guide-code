@@ -10,9 +10,6 @@ module.exports = {
     '@storybook/preset-create-react-app',
     '@storybook/addon-a11y',
   ],
-  features: {
-    previewCsfV3: true,
-  },
   webpackFinal: async (config) => {
     return {
       ...config,
