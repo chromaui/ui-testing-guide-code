@@ -32,33 +32,33 @@ Error.parameters = {
   ],
 };
 
-// export const UpdateTasks = Template.bind({});
-// UpdateTasks.parameters = { ...Default.parameters };
-// UpdateTasks.play = async ({ canvasElement }) => {
-//   const canvas = within(canvasElement);
-//   const getTask = (name) => canvas.findByRole('listitem', { name });
+export const UpdateTasks = Template.bind({});
+UpdateTasks.parameters = { ...Default.parameters };
+UpdateTasks.play = async ({ canvasElement }) => {
+  const canvas = within(canvasElement);
+  const getTask = (name) => canvas.findByRole('listitem', { name });
 
-//   // Pin
-//   const itemToPin = await getTask('Export logo');
-//   const pinButton = await findByRole(itemToPin, 'button', { name: 'pin' });
-//   await fireEvent.click(pinButton);
+  // Pin
+  const itemToPin = await getTask('Export logo');
+  const pinButton = await findByRole(itemToPin, 'button', { name: 'pin' });
+  await fireEvent.click(pinButton);
 
-//   // Archive
-//   const itemToArchive = await getTask('QA dropdown');
-//   const archiveCheckbox = await findByRole(itemToArchive, 'checkbox');
-//   await fireEvent.click(archiveCheckbox);
+  // Archive
+  const itemToArchive = await getTask('QA dropdown');
+  const archiveCheckbox = await findByRole(itemToArchive, 'checkbox');
+  await fireEvent.click(archiveCheckbox);
 
-//   // Edit
-//   const itemToEdit = await getTask('Fix bug in input error state');
-//   const taskInput = await findByRole(itemToEdit, 'textbox');
-//   await fireEvent.change(taskInput, {
-//     target: { value: 'Fix bug in the textarea error state' },
-//   });
+  // Edit
+  const itemToEdit = await getTask('Fix bug in input error state');
+  const taskInput = await findByRole(itemToEdit, 'textbox');
+  await fireEvent.change(taskInput, {
+    target: { value: 'Fix bug in the textarea error state' },
+  });
 
-//   // Delete
-//   const itemToDelete = await getTask('Build a date picker');
-//   const deleteButton = await findByRole(itemToDelete, 'button', {
-//     name: 'delete',
-//   });
-//   await fireEvent.click(deleteButton);
-// };
+  // Delete
+  const itemToDelete = await getTask('Build a date picker');
+  const deleteButton = await findByRole(itemToDelete, 'button', {
+    name: 'delete',
+  });
+  await fireEvent.click(deleteButton);
+};
