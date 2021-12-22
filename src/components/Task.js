@@ -8,13 +8,14 @@ import {
   Box,
   VisuallyHidden,
 } from '@chakra-ui/react';
-import { BellIcon } from '@chakra-ui/icons';
+import { StarIcon, DeleteIcon } from '@chakra-ui/icons';
 
 export const Task = ({
   task: { id, title, state },
   onArchiveTask,
   onTogglePinTask,
   onEditTitle,
+  onDeleteTask,
   ...props
 }) => (
   <Flex
@@ -45,21 +46,30 @@ export const Task = ({
       <Input
         variant="unstyled"
         flex="1 1 auto"
-        color={state === 'TASK_ARCHIVED' ? 'gray.400' : 'gray.700'}
+        color={state === 'TASK_ARCHIVED' ? 'gray.600' : 'gray.700'}
         textDecoration={state === 'TASK_ARCHIVED' ? 'line-through' : 'none'}
-        fontSize="md"
-        fontWeight="bold"
+        fontSize="sm"
         isTruncated
         value={title}
         onChange={(e) => onEditTitle(e.target.value, id)}
       />
     </Box>
     <IconButton
+      p={3}
+      flex="none"
+      aria-label="delete"
+      variant="ghost"
+      color="gray.200"
+      _hover={{ color: 'red.300' }}
+      icon={<DeleteIcon />}
+      onClick={() => onDeleteTask(id)}
+    />
+    <IconButton
       p={5}
       flex="none"
       aria-label={state === 'TASK_PINNED' ? 'unpin' : 'pin'}
       variant={state === 'TASK_PINNED' ? 'unpin' : 'pin'}
-      icon={<BellIcon />}
+      icon={<StarIcon />}
       onClick={() => onTogglePinTask(state, id)}
     />
   </Flex>
@@ -74,4 +84,5 @@ Task.propTypes = {
   onArchiveTask: PropTypes.func.isRequired,
   onTogglePinTask: PropTypes.func.isRequired,
   onEditTitle: PropTypes.func.isRequired,
+  onDeleteTask: PropTypes.func.isRequired,
 };

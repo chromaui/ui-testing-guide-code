@@ -19,20 +19,25 @@
   "scripts": {
     "start": "SKIP_PREFLIGHT_CHECK=true react-scripts start",
     "build": "SKIP_PREFLIGHT_CHECK=true react-scripts build",
-    "test": "react-scripts test",
+    "test": "SKIP_PREFLIGHT_CHECK=true react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "cypress": "cypress open"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
     ],
+    "plugins": [
+      "react-hooks",
+      "storybook"
+    ],
     "overrides": [
       {
         "files": [
-          "**/*.stories.*"
+          "src/**/*.stories.@(js|jsx|ts|tsx)"
         ],
         "rules": {
           "import/no-anonymous-default-export": "off"
@@ -55,9 +60,21 @@
   "devDependencies": {
     "@storybook/addon-actions": "^6.4.9",
     "@storybook/addon-essentials": "^6.4.9",
+    "@storybook/addon-interactions": "^6.4.9",
     "@storybook/addon-links": "^6.4.9",
     "@storybook/node-logger": "^6.4.9",
+    "@storybook/addon-a11y": "^6.4.9",
     "@storybook/preset-create-react-app": "^3.1.7",
-    "@storybook/react": "^6.4.9"
+    "@storybook/react": "^6.4.0-beta.23",
+    "@storybook/testing-library": "^0.0.3",
+    "@storybook/testing-react": "^1.0.0-next.0",
+    "cypress": "^8.2.0",
+    "eslint-plugin-storybook": "^0.1.1",
+    "jest-axe": "^5.0.1",
+    "msw": "^0.32.0",
+    "msw-storybook-addon": "^1.4.1"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
