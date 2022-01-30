@@ -17,13 +17,14 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "SKIP_PREFLIGHT_CHECK=true react-scripts start",
-    "build": "SKIP_PREFLIGHT_CHECK=true react-scripts build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "chromatic": "npx chromatic --project-token=cfa867cf458b"
+    "chromatic": "npx chromatic --project-token=cfa867cf458b",
+    "cypress": "cypress open"
   },
   "eslintConfig": {
     "extends": [
@@ -54,12 +55,16 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-a11y": "^6.4.16",
     "@storybook/addon-actions": "^6.4.16",
     "@storybook/addon-essentials": "^6.4.16",
     "@storybook/addon-links": "^6.4.16",
     "@storybook/node-logger": "^6.4.16",
     "@storybook/preset-create-react-app": "^3.1.7",
     "@storybook/react": "^6.4.16",
+    "@storybook/testing-react": "^1.2.3",
+    "cypress": "^9.3.1",
+    "jest-axe": "^5.0.1",
     "msw": "^0.36.8",
     "msw-storybook-addon": "^1.6.0"
   },

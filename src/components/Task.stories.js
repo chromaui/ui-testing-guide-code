@@ -10,6 +10,13 @@ export default {
     onTogglePinTask: { action: 'onTogglePinTask' },
     onEditTask: { action: 'onEditTask' },
   },
+  parameters: {
+    a11y: {
+      config: {
+        rules: [{ id: 'listitem', enabled: false }],
+      },
+    },
+  },
 };
 
 const Template = (args) => <Task {...args} />;
