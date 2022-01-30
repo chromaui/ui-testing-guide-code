@@ -5,9 +5,11 @@ function getTasks(options) {
 }
 
 function updateTask(tasks, id, updatedTask) {
-  return tasks.map((task) =>
-    task.id === id ? { ...task, ...updatedTask } : task
-  );
+  return tasks.map((task) => (task.id === id ? { ...task, ...updatedTask } : task));
+}
+
+function deleteTask(tasks, id) {
+  return tasks.filter((task) => task.id !== id);
 }
 
 export const reducer = (tasks, action) => {
@@ -20,6 +22,8 @@ export const reducer = (tasks, action) => {
       return updateTask(tasks, action.id, { state: 'TASK_PINNED' });
     case 'INBOX_TASK':
       return updateTask(tasks, action.id, { state: 'TASK_INBOX' });
+    case 'DELETE_TASK':
+      return deleteTask(tasks, action.id);
     case 'EDIT_TITLE':
       return updateTask(tasks, action.id, { title: action.title });
     default:

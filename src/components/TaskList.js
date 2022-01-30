@@ -26,17 +26,12 @@ const LoadingTask = () => (
   </Flex>
 );
 
-export function TaskList({
-  loading,
-  tasks,
-  onTogglePinTask,
-  onArchiveTask,
-  onEditTitle,
-}) {
+export function TaskList({ loading, tasks, onTogglePinTask, onArchiveTask, onEditTitle, onDeleteTask }) {
   const events = {
     onTogglePinTask,
     onArchiveTask,
     onEditTitle,
+    onDeleteTask,
   };
 
   if (loading) {
@@ -50,14 +45,7 @@ export function TaskList({
   }
 
   if (tasks.length === 0) {
-    return (
-      <EmptyState
-        minHeight={72}
-        Icon={CheckIcon}
-        title="You have no tasks"
-        subtitle="Sit back and relax"
-      />
-    );
+    return <EmptyState minHeight={72} Icon={CheckIcon} title="You have no tasks" subtitle="Sit back and relax" />;
   }
 
   const tasksInOrder = [
@@ -80,6 +68,7 @@ TaskList.propTypes = {
   onTogglePinTask: PropTypes.func.isRequired,
   onArchiveTask: PropTypes.func.isRequired,
   onEditTitle: PropTypes.func.isRequired,
+  onDeleteTask: PropTypes.func.isRequired,
 };
 
 TaskList.defaultProps = {
