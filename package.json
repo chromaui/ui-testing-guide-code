@@ -59,6 +59,11 @@
     "@storybook/addon-links": "^6.4.16",
     "@storybook/node-logger": "^6.4.16",
     "@storybook/preset-create-react-app": "^3.1.7",
-    "@storybook/react": "^6.4.16"
+    "@storybook/react": "^6.4.16",
+    "msw": "^0.36.8",
+    "msw-storybook-addon": "^1.6.0"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
