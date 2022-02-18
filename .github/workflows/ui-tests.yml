@@ -22,12 +22,39 @@ jobs:
       - name: Install dependencies if cache invalid
         if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn
+  # Run visual and composition tests with Chromatic
+  # visual-and-composition:
+  #   runs-on: ubuntu-latest
+  #   needs: install-cache
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #       with:
+  #         fetch-depth: 0 # Required to retrieve git history
+  #     - name: Restore yarn dependencies
+  #       uses: actions/cache@v2
+  #       id: yarn-cache
+  #       with:
+  #         path: |
+  #           ~/.cache/Cypress
+  #           node_modules
+  #         key: ${{ runner.os }}-yarn-v1-${{ hashFiles('**/yarn.lock') }}
+  #         restore-keys: |
+  #           ${{ runner.os }}-yarn-v1
+  #     - name: Publish to Chromatic
+  #       uses: chromaui/action@v1
+  #       with:
+  #         token: ${{ secrets.GITHUB_TOKEN }}
+  #         # Grab this from the Chromatic manage page
+  #         projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
   # Run interaction and accessibility tests with Axe
   interaction-and-accessibility:
     runs-on: ubuntu-latest
     needs: install-cache
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
       - name: Restore yarn dependencies
         uses: actions/cache@v2
         id: yarn-cache
@@ -38,32 +65,12 @@ jobs:
           key: ${{ runner.os }}-yarn-v1-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-v1
+      - name: playwright
+        run: npx playwright install
       - name: Run test
-        run: yarn test
-  # Run visual and composition tests with Chromatic
-  visual-and-composition:
-    runs-on: ubuntu-latest
-    needs: install-cache
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0 # Required to retrieve git history
-      - name: Restore yarn dependencies
-        uses: actions/cache@v2
-        id: yarn-cache
-        with:
-          path: |
-            ~/.cache/Cypress
-            node_modules
-          key: ${{ runner.os }}-yarn-v1-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-v1
-      - name: Publish to Chromatic
-        uses: chromaui/action@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          # Grab this from the Chromatic manage page
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+        run: yarn test-storybook --url https://60876bbe754b7b0021704b3d-uudhhwjzic.chromatic.com
+        env:
+          TARGET_URL: '${{ github.event.deployment_status.target_url }}'
   # Run user flow tests with Cypress
   user-flow:
     runs-on: ubuntu-latest
