@@ -21,7 +21,9 @@
     "build": "SKIP_PREFLIGHT_CHECK=true react-scripts build",
     "test": "SKIP_PREFLIGHT_CHECK=true react-scripts test",
     "eject": "react-scripts eject",
+    "prestorybook": "node scripts/auth-for-storybook.js",
     "storybook": "start-storybook -p 6006 -s public",
+    "prebuild-storybook": "node scripts/auth-for-storybook.js",
     "build-storybook": "build-storybook -s public",
     "cypress": "cypress open"
   },
