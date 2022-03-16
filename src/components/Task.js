@@ -8,7 +8,7 @@ import {
   Box,
   VisuallyHidden,
 } from '@chakra-ui/react';
-import { BellIcon } from '@chakra-ui/icons';
+import { StarIcon } from '@chakra-ui/icons';
 
 export const Task = ({
   task: { id, title, state },
@@ -47,8 +47,7 @@ export const Task = ({
         flex="1 1 auto"
         color={state === 'TASK_ARCHIVED' ? 'gray.400' : 'gray.700'}
         textDecoration={state === 'TASK_ARCHIVED' ? 'line-through' : 'none'}
-        fontSize="md"
-        fontWeight="bold"
+        fontSize="sm"
         isTruncated
         value={title}
         onChange={(e) => onEditTitle(e.target.value, id)}
@@ -59,7 +58,7 @@ export const Task = ({
       flex="none"
       aria-label={state === 'TASK_PINNED' ? 'unpin' : 'pin'}
       variant={state === 'TASK_PINNED' ? 'unpin' : 'pin'}
-      icon={<BellIcon />}
+      icon={<StarIcon />}
       onClick={() => onTogglePinTask(state, id)}
     />
   </Flex>
