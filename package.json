@@ -71,6 +71,7 @@
     "@storybook/test-runner": "^0.0.3-next.8",
     "@storybook/testing-library": "^0.0.3",
     "@storybook/testing-react": "^1.0.0-next.0",
+    "axe-playwright": "^1.1.11",
     "concurrently": "^7.0.0",
     "cypress": "^8.2.0",
     "eslint-plugin-storybook": "^0.1.1",

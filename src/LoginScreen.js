@@ -75,7 +75,9 @@ export const LoginScreen = ({ onLogIn }) => (
           Sign in to your account
         </Text>
       </Box>
-      <LoginForm onSubmit={onLogIn} />
+      <main>
+        <LoginForm onSubmit={onLogIn} />
+      </main>
     </Box>
   </Flex>
 );

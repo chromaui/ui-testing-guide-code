@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Box, Heading } from '@chakra-ui/react';
+import { Box, Heading, VisuallyHidden } from '@chakra-ui/react';
 import { Icon } from '@chakra-ui/react';
 import { TaskList } from './components/TaskList';
 import { EmptyState } from './components/EmptyState';
@@ -43,12 +43,15 @@ export const InboxScreen = ({ error }) => {
 
   if (error) {
     return (
-      <EmptyState
-        h="75vh"
-        Icon={FrownIcon}
-        title="Oh no!"
-        subtitle="Something went wrong"
-      />
+      <main>
+        <VisuallyHidden as="h1">Not found</VisuallyHidden>
+        <EmptyState
+          h="75vh"
+          Icon={FrownIcon}
+          title="Oh no!"
+          subtitle="Something went wrong"
+        />
+      </main>
     );
   }
 
@@ -65,13 +68,15 @@ export const InboxScreen = ({ error }) => {
           Taskbox
         </Heading>
       </Box>
-      <TaskList
-        tasks={tasks}
-        onArchiveTask={archiveTask}
-        onTogglePinTask={togglePinTask}
-        onEditTitle={editTitle}
-        onDeleteTask={deleteTask}
-      />
+      <main>
+        <TaskList
+          tasks={tasks}
+          onArchiveTask={archiveTask}
+          onTogglePinTask={togglePinTask}
+          onEditTitle={editTitle}
+          onDeleteTask={deleteTask}
+        />
+      </main>
     </Box>
   );
 };

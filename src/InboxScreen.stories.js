@@ -72,7 +72,7 @@ EditTask.play = async ({ canvasElement }) => {
     target: { value: 'Fix bug in the textarea error state' },
   });
 
-  const updatedTaskName = 'Fix bug in the form error state';
+  const updatedTaskName = 'Fix bug in the textarea error state';
 
   fireEvent.change(taskInput, {
     target: { value: 'Fix bug in the textarea error state' },
