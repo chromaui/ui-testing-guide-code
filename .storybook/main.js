@@ -9,11 +9,7 @@ module.exports = {
     '@storybook/addon-essentials',
     '@storybook/preset-create-react-app',
     '@storybook/addon-a11y',
-    '@storybook/addon-interactions',
   ],
-  features: {
-    interactionsDebugger: true,
-  },
   webpackFinal: async (config) => {
     return {
       ...config,
