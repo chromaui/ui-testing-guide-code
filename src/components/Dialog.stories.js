@@ -7,7 +7,6 @@ import {
   fireEvent,
   screen,
   findByText,
-  queryByText,
 } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
 
@@ -20,6 +19,9 @@ export default {
   ],
   args: {
     customerId: '7238947029',
+  },
+  parameters: {
+    backgrounds: { default: 'white' },
   },
 };
 

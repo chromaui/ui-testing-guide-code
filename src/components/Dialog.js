@@ -158,7 +158,7 @@ export function Dialog({ customerId }) {
 
   return (
     <>
-      <Button colorScheme="blackAlpha" onClick={onOpen}>
+      <Button colorScheme="red" onClick={onOpen}>
         Delete Customer
       </Button>
 
