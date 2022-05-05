@@ -49,7 +49,7 @@ export function TaskList({
     );
   }
 
-  if (tasks.length === 0) {
+  if (tasks === undefined || tasks.length === 0) {
     return (
       <EmptyState
         minHeight={72}
