@@ -25,6 +25,7 @@ export const Task = ({
       borderColor: 'gray.200',
     }}
     h={12}
+
     bg="red"
     alignItems="center"
     _hover={{
@@ -39,7 +40,7 @@ export const Task = ({
       isChecked={state === 'TASK_ARCHIVED'}
       onChange={(e) => onArchiveTask(e.target.checked, id)}
     >
-      <VisuallyHidden>Archive</VisuallyHidden>
+      <VisuallyHidden>Archive *</VisuallyHidden>
     </Checkbox>
     <Box width="full" as="label">
       <VisuallyHidden>Edit</VisuallyHidden>
