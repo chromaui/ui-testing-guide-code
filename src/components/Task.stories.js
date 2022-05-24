@@ -10,16 +10,13 @@ export default {
     onEditTitle: { action: 'onEditTitle' },
     onDeleteTask: { action: 'onDeleteTask' },
   },
-  parameters: {
-    a11y: {
-      config: {
-        rules: [{ id: 'listitem', enabled: false }],
-      },
-    },
-  },
 };
 
-const Template = (args) => <Task {...args} />;
+const Template = (args) => (
+  <ul>
+    <Task {...args} />
+  </ul>
+);
 
 export const Default = Template.bind({});
 Default.args = {
