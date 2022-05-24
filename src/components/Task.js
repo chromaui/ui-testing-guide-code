@@ -25,7 +25,7 @@ export const Task = ({
       borderColor: 'gray.200',
     }}
     h={12}
-    bg="white"
+    bg="red"
     alignItems="center"
     _hover={{
       bgGradient: 'linear(to-b,  brand.100,  brand.50)',
