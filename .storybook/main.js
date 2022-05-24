@@ -3,6 +3,7 @@ const path = require('path');
 const toPath = (_path) => path.join(process.cwd(), _path);
 
 module.exports = {
+  staticDirs: ['../public'],
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
     '@storybook/addon-links',
@@ -10,6 +11,12 @@ module.exports = {
     '@storybook/preset-create-react-app',
     '@storybook/addon-a11y',
   ],
+  ],
+  core: {
+    builder: {
+      name: 'webpack5',
+    },
+  },
   webpackFinal: async (config) => {
     return {
       ...config,

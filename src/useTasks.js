@@ -6,7 +6,7 @@ function getTasks(options) {
 
 function updateTask(tasks, id, updatedTask) {
   return tasks.map((task) =>
-    task.id === id ? { ...task, ...updatedTask } : task
+      task.id === id ? { ...task, ...updatedTask } : task
   );
 }
 
@@ -41,14 +41,14 @@ export function useTasks() {
     const signal = abortController.signal;
 
     getTasks({ signal })
-      .then(({ tasks }) => {
-        dispatch({ type: 'UPDATE_TASKS', tasks });
-      })
-      .catch((error) => {
-        if (!abortController.signal.aborted) {
-          console.log(error);
-        }
-      });
+        .then(({ tasks }) => {
+          dispatch({ type: 'UPDATE_TASKS', tasks });
+        })
+        .catch((error) => {
+          if (!abortController.signal.aborted) {
+            console.log(error);
+          }
+        });
 
     return () => {
       abortController.abort();
