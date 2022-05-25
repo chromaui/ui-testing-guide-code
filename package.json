@@ -19,10 +19,12 @@
   "scripts": {
     "start": "SKIP_PREFLIGHT_CHECK=true react-scripts start",
     "build": "SKIP_PREFLIGHT_CHECK=true react-scripts build",
-    "test": "react-scripts test",
+    "test": "SKIP_PREFLIGHT_CHECK=true react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "test-storybook": "test-storybook",
+    "cypress": "cypress open"
   },
   "eslintConfig": {
     "extends": [
@@ -53,13 +55,25 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-a11y": "^6.5.3",
     "@storybook/addon-actions": "^6.5.3",
     "@storybook/addon-essentials": "^6.5.3",
+    "@storybook/addon-interactions": "^6.5.3",
     "@storybook/addon-links": "^6.5.3",
     "@storybook/builder-webpack5": "^6.5.3",
+    "@storybook/jest": "^0.0.10",
     "@storybook/manager-webpack5": "^6.5.3",
     "@storybook/node-logger": "^6.5.3",
     "@storybook/preset-create-react-app": "^4.1.0",
-    "@storybook/react": "^6.5.3"
+    "@storybook/react": "^6.5.3",
+    "@storybook/test-runner": "^0.1.0",
+    "@storybook/testing-library": "^0.0.11",
+    "axe-playwright": "^1.1.11",
+    "cypress": "^9.6.1",
+    "msw": "^0.40.0",
+    "msw-storybook-addon": "^1.6.3"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
