@@ -39,7 +39,7 @@ export const Task = ({
       isChecked={state === 'TASK_ARCHIVED'}
       onChange={(e) => onArchiveTask(e.target.checked, id)}
     >
-      <VisuallyHidden>Archive *</VisuallyHidden>
+      <VisuallyHidden>Archive</VisuallyHidden>
     </Checkbox>
     <Box width="full" as="label">
       <VisuallyHidden>Edit</VisuallyHidden>
@@ -61,7 +61,7 @@ export const Task = ({
       variant="ghost"
       color="gray.200"
       _hover={{ color: 'red.300' }}
-      icon={<StarIcon />}
+      icon={<DeleteIcon />}
       onClick={() => onDeleteTask(id)}
     />
     <IconButton
