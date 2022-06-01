@@ -61,7 +61,7 @@ export const Task = ({
       variant="ghost"
       color="gray.200"
       _hover={{ color: 'red.300' }}
-      icon={<DeleteIcon />}
+      icon={<StarIcon />}
       onClick={() => onDeleteTask(id)}
     />
     <IconButton
