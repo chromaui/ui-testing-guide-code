@@ -55,6 +55,7 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-a11y": "^6.5.9",
     "@storybook/addon-actions": "^6.5.3",
     "@storybook/addon-essentials": "^6.5.3",
     "@storybook/addon-interactions": "^6.5.9",
@@ -67,6 +68,7 @@
     "@storybook/react": "^6.5.3",
     "@storybook/test-runner": "^0.3.0",
     "@storybook/testing-library": "^0.0.13",
+    "axe-playwright": "^1.1.11",
     "chromatic": "^6.6.3",
     "msw": "^0.42.1",
     "msw-storybook-addon": "^1.6.3"
