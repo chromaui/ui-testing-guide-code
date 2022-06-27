@@ -24,7 +24,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "chromatic": "npx chromatic --project-token=2b865e390525",
-    "test-storybook": "test-storybook"
+    "test-storybook": "test-storybook",
+    "cypress": "cypress open"
   },
   "eslintConfig": {
     "extends": [
@@ -70,6 +71,7 @@
     "@storybook/testing-library": "^0.0.13",
     "axe-playwright": "^1.1.11",
     "chromatic": "^6.6.3",
+    "cypress": "^10.2.0",
     "msw": "^0.42.1",
     "msw-storybook-addon": "^1.6.3"
   },
