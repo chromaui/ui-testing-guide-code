@@ -4920,6 +4920,11 @@
   resolved "https://registry.yarnpkg.com/@types/webpack-env/-/webpack-env-1.16.0.tgz#8c0a9435dfa7b3b1be76562f3070efb3f92637b4"
   integrity sha512-Fx+NpfOO0CpeYX2g9bkvX8O5qh9wrU1sOF4g8sft4Mu7z+qfe387YlyY8w8daDyDsKY5vUxM0yxkAYnbkRbZEw==
 
+"@types/webpack-env@^1.17.0":
+  version "1.17.0"
+  resolved "https://registry.yarnpkg.com/@types/webpack-env/-/webpack-env-1.17.0.tgz#f99ce359f1bfd87da90cc4a57cab0a18f34a48d0"
+  integrity sha512-eHSaNYEyxRA5IAG0Ym/yCyf86niZUIF/TpWKofQI/CVfh5HsMEUyfE2kwFxha4ow0s5g0LfISQxpDKjbRDrizw==
+
 "@types/webpack-sources@*":
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/@types/webpack-sources/-/webpack-sources-2.1.0.tgz#8882b0bd62d1e0ce62f183d0d01b72e6e82e8c10"
@@ -6763,6 +6768,13 @@ chownr@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/chownr/-/chownr-2.0.0.tgz#15bfbe53d2eab4cf70f18a8cd68ebe5b3cb1dece"
   integrity sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==
+
+chromatic@^6.6.4:
+  version "6.6.4"
+  resolved "https://registry.yarnpkg.com/chromatic/-/chromatic-6.6.4.tgz#39c82d82070f9ee9792ae2432061bca38fe210e4"
+  integrity sha512-3E3yget80FHufWUI5HGPeobflD6hl1aXRrLtSeTIz02RV0ytYhMbS5j9/IzNGiuy9FWnfP7TcOXKNiwD3qn1kQ==
+  dependencies:
+    "@types/webpack-env" "^1.17.0"
 
 chrome-trace-event@^1.0.2:
   version "1.0.3"
@@ -16544,8 +16556,10 @@ watchpack@^1.7.4:
   resolved "https://registry.yarnpkg.com/watchpack/-/watchpack-1.7.5.tgz#1267e6c55e0b9b5be44c2023aed5437a2c26c453"
   integrity sha512-9P3MWk6SrKjHsGkLT2KHXdQ/9SNkyoJbabxnKOoJepsvJjJG8uYTR3yTPxPQvNDI3w4Nz1xnE0TLHK4RIVe/MQ==
   dependencies:
+    chokidar "^3.4.1"
     graceful-fs "^4.1.2"
     neo-async "^2.5.0"
+    watchpack-chokidar2 "^2.0.1"
   optionalDependencies:
     chokidar "^3.4.1"
     watchpack-chokidar2 "^2.0.1"
