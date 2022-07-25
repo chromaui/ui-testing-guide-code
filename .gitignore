@@ -22,4 +22,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# storybook
 build-storybook.log
+storybook-static
+
+# cypress
+cypress/videos
+cypress/screenshots
