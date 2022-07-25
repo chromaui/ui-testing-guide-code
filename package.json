@@ -23,8 +23,9 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "chromatic": "npx chromatic --project-token=d2da23b86459",
-    "test-storybook": "test-storybook"
+    "chromatic": "npx chromatic --project-token=293ea2998030",
+    "test-storybook": "test-storybook",
+    "cypress": "cypress open"
   },
   "eslintConfig": {
     "extends": [
@@ -68,6 +69,7 @@
     "@storybook/testing-library": "^0.0.13",
     "axe-playwright": "^1.1.11",
     "chromatic": "^6.5.3",
+    "cypress": "^10.2.0",
     "msw": "^0.39.2",
     "msw-storybook-addon": "^1.6.3"
   },
