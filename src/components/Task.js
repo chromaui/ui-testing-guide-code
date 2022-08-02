@@ -47,7 +47,7 @@ export const Task = ({
         flex="1 1 auto"
         color={state === 'TASK_ARCHIVED' ? 'gray.400' : 'gray.700'}
         textDecoration={state === 'TASK_ARCHIVED' ? 'line-through' : 'none'}
-        fontSize="md"
+        fontSize="xl"
         fontWeight="bold"
         isTruncated
         value={title}
