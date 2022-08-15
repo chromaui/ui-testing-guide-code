@@ -83,3 +83,18 @@ EditTask.play = async ({ canvasElement }) => {
   userEvent.type(taskInput, ' and disabled state');
   await expect(taskInput.value).toBe('Fix bug in input error state and disabled state');
 };
+
+export const DeleteTask = Template.bind({});
+DeleteTask.parameters = { ...Default.parameters };
+DeleteTask.play = async ({ canvasElement }) => {
+  const canvas = within(canvasElement);
+  const getTask = (name) => canvas.findByRole('listitem', { name });
+
+  const itemToDelete = await getTask('Build a date picker');
+  const deleteButton = await findByRole(itemToDelete, 'button', {
+    name: 'delete',
+  });
+  await userEvent.click(deleteButton);
+
+  await expect(canvas.getAllByRole('listitem').length).toBe(5);
+};

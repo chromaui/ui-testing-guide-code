@@ -10,6 +10,10 @@ function updateTask(tasks, id, updatedTask) {
   );
 }
 
+function deleteTask(tasks, id) {
+  return tasks.filter((task) => task.id !== id);
+}
+
 export const reducer = (tasks, action) => {
   switch (action.type) {
     case 'UPDATE_TASKS':
@@ -20,6 +24,8 @@ export const reducer = (tasks, action) => {
       return updateTask(tasks, action.id, { state: 'TASK_PINNED' });
     case 'INBOX_TASK':
       return updateTask(tasks, action.id, { state: 'TASK_INBOX' });
+    case 'DELETE_TASK':
+      return deleteTask(tasks, action.id);
     case 'EDIT_TITLE':
       return updateTask(tasks, action.id, { title: action.title });
     default:
