@@ -43,7 +43,7 @@ export const InboxScreen = ({ error }) => {
         h="75vh"
         Icon={FrownIcon}
         title="Oh no!"
-        subtitle="Something went wrong"
+        subtitle="Looks like something went wrong"
       />
     );
   }
@@ -54,7 +54,7 @@ export const InboxScreen = ({ error }) => {
         <Heading
           as="h1"
           fontSize="lg"
-          lineHeight="8"
+          lineHeight="9"
           color="brand.500"
           textAlign={['center', 'center', 'left']}
         >

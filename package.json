@@ -62,8 +62,13 @@
     "@storybook/node-logger": "^6.5.3",
     "@storybook/preset-create-react-app": "^4.1.0",
     "@storybook/react": "^6.5.3",
-    "chromatic": "^6.8.0"
+    "chromatic": "^6.8.0",
+    "msw": "^0.46.0",
+    "msw-storybook-addon": "^1.6.3"
   },
   "readme": "ERROR: No README data found!",
-  "_id": "ui-testing-guide-code@0.1.0"
+  "_id": "ui-testing-guide-code@0.1.0",
+  "msw": {
+    "workerDirectory": "public"
+  }
 }
