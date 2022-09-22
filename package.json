@@ -25,7 +25,7 @@
         "build-storybook": "build-storybook",
         "test-storybook": "test-storybook",
         "chromatic": "npx chromatic --project-token=3e497c855d54",
-        "cypress": "cypress open"
+        "cypress": "cypress open --config-file=cypress.config.json"
     },
     "eslintConfig": {
         "extends": [
