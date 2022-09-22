@@ -1,73 +1,85 @@
 {
-  "name": "ui-testing-guide-code",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@chakra-ui/icons": "^1.0.12",
-    "@chakra-ui/react": "^1.6.0",
-    "@emotion/react": "^11",
-    "@emotion/styled": "^11",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "framer-motion": "^4",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "^5.0.1",
-    "web-vitals": "^1.0.1"
-  },
-  "scripts": {
-    "start": "SKIP_PREFLIGHT_CHECK=true react-scripts start",
-    "build": "SKIP_PREFLIGHT_CHECK=true react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "chromatic": "npx chromatic --project-token=3e497c855d54"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ],
-    "overrides": [
-      {
-        "files": [
-          "**/*.stories.*"
+    "name": "ui-testing-guide-code",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@chakra-ui/icons": "^1.0.12",
+        "@chakra-ui/react": "^1.6.0",
+        "@emotion/react": "^11",
+        "@emotion/styled": "^11",
+        "@testing-library/jest-dom": "^5.11.4",
+        "@testing-library/react": "^11.1.0",
+        "@testing-library/user-event": "^12.1.10",
+        "framer-motion": "^4",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-scripts": "^5.0.1",
+        "web-vitals": "^1.0.1"
+    },
+    "scripts": {
+        "start": "SKIP_PREFLIGHT_CHECK=true react-scripts start",
+        "build": "SKIP_PREFLIGHT_CHECK=true react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "storybook": "start-storybook -p 6006",
+        "build-storybook": "build-storybook",
+        "test-storybook": "test-storybook",
+        "chromatic": "npx chromatic --project-token=3e497c855d54",
+        "cypress": "cypress open"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
         ],
-        "rules": {
-          "import/no-anonymous-default-export": "off"
-        }
-      }
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@storybook/addon-actions": "^6.5.3",
-    "@storybook/addon-essentials": "^6.5.3",
-    "@storybook/addon-links": "^6.5.3",
-    "@storybook/builder-webpack5": "^6.5.3",
-    "@storybook/manager-webpack5": "^6.5.3",
-    "@storybook/node-logger": "^6.5.3",
-    "@storybook/preset-create-react-app": "^4.1.0",
-    "@storybook/react": "^6.5.3",
-    "msw": "^0.47.3",
-    "msw-storybook-addon": "^1.6.3"
-  },
-  "readme": "ERROR: No README data found!",
-  "_id": "ui-testing-guide-code@0.1.0",
-  "msw": {
-    "workerDirectory": "public"
-  }
+        "overrides": [
+            {
+                "files": [
+                    "**/*.stories.*"
+                ],
+                "rules": {
+                    "import/no-anonymous-default-export": "off"
+                }
+            }
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@storybook/addon-a11y": "^6.5.12",
+        "@storybook/addon-actions": "^6.5.3",
+        "@storybook/addon-essentials": "^6.5.3",
+        "@storybook/addon-interactions": "^6.5.12",
+        "@storybook/addon-links": "^6.5.3",
+        "@storybook/builder-webpack5": "^6.5.3",
+        "@storybook/jest": "^0.0.10",
+        "@storybook/manager-webpack5": "^6.5.3",
+        "@storybook/node-logger": "^6.5.3",
+        "@storybook/preset-create-react-app": "^4.1.0",
+        "@storybook/react": "^6.5.3",
+        "@storybook/test-runner": "^0.7.2",
+        "@storybook/testing-library": "^0.0.13",
+        "axe-playwright": "^1.1.11",
+        "cypress": "^10.8.0",
+        "jest": "^27.5.1",
+        "jest-environment-node": "27.5.1",
+        "jest-runner": "^27.5.1",
+        "msw": "^0.47.3",
+        "msw-storybook-addon": "^1.6.3"
+    },
+    "readme": "ERROR: No README data found!",
+    "_id": "ui-testing-guide-code@0.1.0",
+    "msw": {
+        "workerDirectory": "public"
+    }
 }
