@@ -1,22 +1,8 @@
-import React from 'react';
+import { StarIcon } from '@chakra-ui/icons';
+import { Box, Checkbox, Flex, IconButton, Input, VisuallyHidden } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
-import {
-  Checkbox,
-  Flex,
-  IconButton,
-  Input,
-  Box,
-  VisuallyHidden,
-} from '@chakra-ui/react';
-import { BellIcon } from '@chakra-ui/icons';
 
-export const Task = ({
-  task: { id, title, state },
-  onArchiveTask,
-  onTogglePinTask,
-  onEditTitle,
-  ...props
-}) => (
+export const Task = ({ task: { id, title, state }, onArchiveTask, onTogglePinTask, onEditTitle, ...props }) => (
   <Flex
     as="li"
     _notLast={{
@@ -33,11 +19,7 @@ export const Task = ({
     tabIndex="0"
     {...props}
   >
-    <Checkbox
-      px={4}
-      isChecked={state === 'TASK_ARCHIVED'}
-      onChange={(e) => onArchiveTask(e.target.checked, id)}
-    >
+    <Checkbox px={4} isChecked={state === 'TASK_ARCHIVED'} onChange={(e) => onArchiveTask(e.target.checked, id)}>
       <VisuallyHidden>Archive</VisuallyHidden>
     </Checkbox>
     <Box width="full" as="label">
@@ -59,7 +41,7 @@ export const Task = ({
       flex="none"
       aria-label={state === 'TASK_PINNED' ? 'unpin' : 'pin'}
       variant={state === 'TASK_PINNED' ? 'unpin' : 'pin'}
-      icon={<BellIcon />}
+      icon={<StarIcon />}
       onClick={() => onTogglePinTask(state, id)}
     />
   </Flex>
