@@ -1,4 +1,4 @@
-import { StarIcon } from '@chakra-ui/icons';
+import { ArrowDownIcon } from '@chakra-ui/icons';
 import { Box, Checkbox, Flex, IconButton, Input, VisuallyHidden } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
@@ -41,7 +41,7 @@ export const Task = ({ task: { id, title, state }, onArchiveTask, onTogglePinTas
       flex="none"
       aria-label={state === 'TASK_PINNED' ? 'unpin' : 'pin'}
       variant={state === 'TASK_PINNED' ? 'unpin' : 'pin'}
-      icon={<StarIcon />}
+      icon={<ArrowDownIcon />}
       onClick={() => onTogglePinTask(state, id)}
     />
   </Flex>
