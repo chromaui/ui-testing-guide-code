@@ -60,6 +60,7 @@
     "@storybook/manager-webpack5": "^6.5.3",
     "@storybook/node-logger": "^6.5.3",
     "@storybook/preset-create-react-app": "^4.1.0",
-    "@storybook/react": "^6.5.3"
+    "@storybook/react": "^6.5.3",
+    "chromatic": "^6.17.1"
   }
 }
