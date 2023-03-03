@@ -22,7 +22,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic --project-token=d365640f75a6"
   },
   "eslintConfig": {
     "extends": [
@@ -62,5 +63,7 @@
     "@storybook/preset-create-react-app": "^4.1.0",
     "@storybook/react": "^6.5.3",
     "chromatic": "^6.17.1"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "ui-testing-guide-code@0.1.0"
 }
