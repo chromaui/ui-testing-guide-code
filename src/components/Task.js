@@ -42,7 +42,6 @@ export const Task = ({
         textDecoration={state === 'TASK_ARCHIVED' ? 'line-through' : 'none'}
         fontSize="sm"
         isTruncated
-        backgroundColor="blue.50"
         value={title}
         onChange={(e) => onEditTitle(e.target.value, id)}
       />
