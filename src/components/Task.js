@@ -38,7 +38,7 @@ export const Task = ({
       <Input
         variant="unstyled"
         flex="1 1 auto"
-        color={state === 'TASK_ARCHIVED' ? 'gray.400' : 'gray.700'}
+        color={state === 'TASK_ARCHIVED' ? 'gray.600' : 'gray.700'}
         textDecoration={state === 'TASK_ARCHIVED' ? 'line-through' : 'none'}
         fontSize="md"
         fontWeight="bold"
