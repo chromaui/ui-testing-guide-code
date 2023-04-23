@@ -23,7 +23,8 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "chromatic": "npx chromatic --project-token=e591b34ca497"
+    "chromatic": "npx chromatic --project-token=e591b34ca497",
+    "test-storybook": "test-storybook"
   },
   "eslintConfig": {
     "extends": [
@@ -56,14 +57,23 @@
   "devDependencies": {
     "@storybook/addon-actions": "^6.5.3",
     "@storybook/addon-essentials": "^6.5.3",
+    "@storybook/addon-interactions": "^6.5.3",
     "@storybook/addon-links": "^6.5.3",
     "@storybook/builder-webpack5": "^6.5.3",
+    "@storybook/jest": "0.0.10",
     "@storybook/manager-webpack5": "^6.5.3",
     "@storybook/node-logger": "^6.5.3",
     "@storybook/preset-create-react-app": "^4.1.0",
     "@storybook/react": "^6.5.3",
-    "chromatic": "^6.17.3"
+    "@storybook/test-runner": "^0.10.0",
+    "@storybook/testing-library": "^0.1.0",
+    "chromatic": "^6.17.3",
+    "msw": "^1.2.1",
+    "msw-storybook-addon": "^1.8.0"
   },
   "readme": "ERROR: No README data found!",
-  "_id": "ui-testing-guide-code@0.1.0"
+  "_id": "ui-testing-guide-code@0.1.0",
+  "msw": {
+    "workerDirectory": "public"
+  }
 }
