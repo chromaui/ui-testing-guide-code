@@ -24,7 +24,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "chromatic": "npx chromatic --project-token=e591b34ca497",
-    "test-storybook": "test-storybook"
+    "test-storybook": "test-storybook",
+    "cypress": "cypress open"
   },
   "eslintConfig": {
     "extends": [
@@ -55,7 +56,9 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-a11y": "^6.5.3",
     "@storybook/addon-actions": "^6.5.3",
+    "@storybook/addon-coverage": "0.0.8",
     "@storybook/addon-essentials": "^6.5.3",
     "@storybook/addon-interactions": "^6.5.3",
     "@storybook/addon-links": "^6.5.3",
@@ -66,8 +69,10 @@
     "@storybook/preset-create-react-app": "^4.1.0",
     "@storybook/react": "^6.5.3",
     "@storybook/test-runner": "^0.10.0",
-    "@storybook/testing-library": "^0.1.0",
+    "@storybook/testing-library": "0.0.13",
+    "axe-playwright": "^1.2.3",
     "chromatic": "^6.17.3",
+    "cypress": "^12.10.0",
     "msw": "^1.2.1",
     "msw-storybook-addon": "^1.8.0"
   },

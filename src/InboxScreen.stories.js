@@ -43,6 +43,7 @@ Error.parameters = {
   },
 };
 
+// 置顶
 export const PinTask = Template.bind({});
 PinTask.parameters = Default.parameters;
 PinTask.play = async ({ canvasElement }) => {
@@ -63,6 +64,7 @@ PinTask.play = async ({ canvasElement }) => {
   await expect(unpinButton).toBeInTheDocument();
 };
 
+// 归档
 export const ArchiveTask = Template.bind({});
 ArchiveTask.parameters = Default.parameters;
 ArchiveTask.play = async ({ canvasElement }) => {
@@ -76,6 +78,7 @@ ArchiveTask.play = async ({ canvasElement }) => {
   await expect(archiveCheckbox.checked).toBe(true);
 };
 
+// 编辑
 export const EditTask = Template.bind({});
 EditTask.parameters = Default.parameters;
 EditTask.play = async ({ canvasElement }) => {
