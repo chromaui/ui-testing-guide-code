@@ -34,7 +34,7 @@ jobs:
         uses: chromaui/action@v1
         with:
           # Grab this from the Chromatic manage page
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          projectToken: ${{ secrets.chpt_158eb84f333c6d8}}
   # Run user flow tests with Cypress
   user-flow:
     runs-on: ubuntu-latest
