@@ -28,7 +28,7 @@ export const Task = ({
     {...props}
   >
     <Checkbox
-      px={4}
+      px={12}
       isChecked={state === 'TASK_ARCHIVED'}
       onChange={(e) => onArchiveTask(e.target.checked, id)}
     >
@@ -39,7 +39,7 @@ export const Task = ({
       <Input
         variant="unstyled"
         flex="1 1 auto"
-        color={state === 'TASK_ARCHIVED' ? 'gray.400' : 'gray.700'}
+        color={state === 'TASK_ARCHIVED' ? 'gray.600' : 'gray.700'}
         textDecoration={state === 'TASK_ARCHIVED' ? 'line-through' : 'none'}
        fontSize="sm"
         isTruncated
@@ -48,7 +48,7 @@ export const Task = ({
       />
     </Box>
     <IconButton
-      p={5}
+      p={10}
       flex="none"
       aria-label={state === 'TASK_PINNED' ? 'unpin' : 'pin'}
       variant={state === 'TASK_PINNED' ? 'unpin' : 'pin'}

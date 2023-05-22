@@ -21,9 +21,11 @@
     "build": "SKIP_PREFLIGHT_CHECK=true react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "chromatic": "npx chromatic --project-token=chpt_158eb84f333c6d8"
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_158eb84f333c6d8",
+    "test-storybook": "test-storybook",
+    "cypress": "cypress open"
   },
   "eslintConfig": {
     "extends": [
@@ -54,17 +56,24 @@
     ]
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^6.5.3",
-    "@storybook/addon-essentials": "^6.5.3",
-    "@storybook/addon-links": "^6.5.3",
-    "@storybook/builder-webpack5": "^6.5.3",
-    "@storybook/manager-webpack5": "^6.5.3",
-    "@storybook/node-logger": "^6.5.3",
-    "@storybook/preset-create-react-app": "^4.1.0",
-    "@storybook/react": "^6.5.3",
+    "@storybook/addon-a11y": "^7.0.12",
+    "@storybook/addon-actions": "^7.0.12",
+    "@storybook/addon-essentials": "^7.0.12",
+    "@storybook/addon-interactions": "^7.0.12",
+    "@storybook/addon-links": "^7.0.12",
+    "@storybook/jest": "^0.1.0",
+    "@storybook/node-logger": "^7.0.12",
+    "@storybook/preset-create-react-app": "^7.0.12",
+    "@storybook/react": "^7.0.12",
+    "@storybook/react-webpack5": "^7.0.12",
+    "@storybook/test-runner": "^0.10.0",
+    "@storybook/testing-library": "^0.1.0",
+    "axe-playwright": "^1.2.3",
     "chromatic": "^6.17.4",
+    "cypress": "^12.12.0",
     "msw": "^1.2.1",
-    "msw-storybook-addon": "^1.8.0"
+    "msw-storybook-addon": "^1.8.0",
+    "storybook": "^7.0.12"
   },
   "readme": "ERROR: No README data found!",
   "_id": "ui-testing-guide-code@0.1.0",
