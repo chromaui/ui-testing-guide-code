@@ -32,11 +32,13 @@ export function TaskList({
   onTogglePinTask,
   onArchiveTask,
   onEditTitle,
+  onDeleteTask,
 }) {
   const events = {
     onTogglePinTask,
     onArchiveTask,
     onEditTitle,
+    onDeleteTask,
   };
 
   if (loading) {
@@ -54,7 +56,7 @@ export function TaskList({
       <EmptyState
         minHeight={72}
         Icon={CheckIcon}
-        title="You have no tasks, thank you for your hardwork!"
+        title="You have no tasks"
         subtitle="Sit back and relax"
       />
     );
@@ -80,6 +82,7 @@ TaskList.propTypes = {
   onTogglePinTask: PropTypes.func.isRequired,
   onArchiveTask: PropTypes.func.isRequired,
   onEditTitle: PropTypes.func.isRequired,
+  onDeleteTask: PropTypes.func.isRequired,
 };
 
 TaskList.defaultProps = {
