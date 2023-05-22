@@ -54,7 +54,7 @@ export function TaskList({
       <EmptyState
         minHeight={72}
         Icon={CheckIcon}
-        title="You have no tasks"
+        title="You have no tasks, thank you for your hardwork!"
         subtitle="Sit back and relax"
       />
     );
