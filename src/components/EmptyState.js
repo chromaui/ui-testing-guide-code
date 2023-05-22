@@ -11,7 +11,7 @@ export const EmptyState = ({ Icon, title, subtitle, ...props }) => (
     {...props}
   >
     <Text py={1}>
-      <Icon color="brand.300" fontSize="5xl" />
+      <Icon color="brand.300" fontSize="4xl" />
     </Text>
     <Text color="gray.600" fontWeight="extrabold" fontSize="md" lineHeight={6}>
       {title}
