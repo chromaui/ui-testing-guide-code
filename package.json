@@ -61,8 +61,13 @@
     "@storybook/manager-webpack5": "^6.5.3",
     "@storybook/node-logger": "^6.5.3",
     "@storybook/preset-create-react-app": "^4.1.0",
-    "@storybook/react": "^6.5.3"
+    "@storybook/react": "^6.5.3",
+    "msw": "^1.2.1",
+    "msw-storybook-addon": "^1.8.0"
   },
   "readme": "ERROR: No README data found!",
-  "_id": "ui-testing-guide-code@0.1.0"
+  "_id": "ui-testing-guide-code@0.1.0",
+  "msw": {
+    "workerDirectory": "public"
+  }
 }
