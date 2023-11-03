@@ -8,6 +8,9 @@ export default function InboxScreen({ error }) {
   const archiveTask = (archive, id) => {
     dispatch({ type: archive ? "ARCHIVE_TASK" : "INBOX_TASK", id });
   };
+  const deleteTask = (id) => {
+    dispatch({ type: "DELETE_TASK", id });
+  };
 
   const togglePinTask = (state, id) => {
     dispatch({
@@ -41,6 +44,7 @@ export default function InboxScreen({ error }) {
         onArchiveTask={archiveTask}
         onTogglePinTask={togglePinTask}
         onEditTitle={editTitle}
+        onDeleteTask={deleteTask}
       />
     </div>
   );
