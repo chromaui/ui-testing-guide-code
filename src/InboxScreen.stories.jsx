@@ -91,3 +91,22 @@ export const EditTask = {
     );
   },
 };
+
+export const DeleteTask = {
+  parameters: {
+    ...Default.parameters,
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const getTask = (id) => canvas.findByRole("listitem", { name: id });
+
+    const itemToDelete = await getTask("task-1");
+    const deleteButton = await findByRole(itemToDelete, "button", {
+      name: "delete",
+    });
+
+    // Click the pin button
+    await userEvent.click(deleteButton);
+    await expect(canvas.getAllByRole("listitem").length).toBe(5);
+  },
+};
