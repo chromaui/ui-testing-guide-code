@@ -3,7 +3,6 @@ import { http, HttpResponse, delay } from "msw";
 import { InboxScreen } from "./InboxScreen";
 import { Default as TaskListDefault } from "./components/TaskList.stories";
 import { expect, within, userEvent, findByRole } from "@storybook/test";
-import { InputContainer } from "./styles/InputStyles";
 
 export default {
   component: InboxScreen,
