@@ -21,8 +21,9 @@
     "build": "SKIP_PREFLIGHT_CHECK=true react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "test-storybook": "test-storybook"
   },
   "eslintConfig": {
     "extends": [
@@ -53,13 +54,24 @@
     ]
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^6.5.3",
-    "@storybook/addon-essentials": "^6.5.3",
-    "@storybook/addon-links": "^6.5.3",
-    "@storybook/builder-webpack5": "^6.5.3",
-    "@storybook/manager-webpack5": "^6.5.3",
-    "@storybook/node-logger": "^6.5.3",
-    "@storybook/preset-create-react-app": "^4.1.0",
-    "@storybook/react": "^6.5.3"
+    "@chromatic-com/storybook": "^3",
+    "@storybook/addon-actions": "^8.6.4",
+    "@storybook/addon-essentials": "^8.6.4",
+    "@storybook/addon-interactions": "^8.6.4",
+    "@storybook/addon-links": "^8.6.4",
+    "@storybook/node-logger": "^8.6.4",
+    "@storybook/preset-create-react-app": "^8.6.4",
+    "@storybook/react": "^8.6.4",
+    "@storybook/react-webpack5": "^8.6.4",
+    "@storybook/test": "^8.6.4",
+    "@storybook/test-runner": "^0.22.0",
+    "msw": "^2.7.3",
+    "msw-storybook-addon": "^2.0.4",
+    "storybook": "^8.6.4"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
   }
 }

@@ -1,9 +1,11 @@
 import React from 'react';
 import { ChakraProvider } from '@chakra-ui/react';
+import { initialize, mswLoader } from 'msw-storybook-addon';
 import { theme } from '../src/theme';
 
+initialize(); // MSW 초기화
+
 export const parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
     matchers: {
       color: /(background|color)$/i,
@@ -26,3 +28,5 @@ export const decorators = [
     </ChakraProvider>
   ),
 ];
+
+export const loaders = [mswLoader]; // `mswLoader`를 `loaders`로 적용
