@@ -1,4 +1,4 @@
-import { extendTheme } from '@chakra-ui/react';
+import { extendTheme } from "@chakra-ui/react";
 
 export const theme = extendTheme({
   fonts: {
@@ -7,23 +7,23 @@ export const theme = extendTheme({
   },
   colors: {
     brand: {
-      50: '#f0fffd',
-      100: '#e5f9f7',
-      200: '#d3edf4',
-      300: '#2cc5d2',
-      400: '#26c6da',
-      500: '#1c3f53',
+      50: "#f0fffd",
+      100: "#e5f9f7",
+      200: "#d3edf4",
+      300: "#2cc5d2",
+      400: "#26c6da",
+      500: "#1c3f53",
     },
   },
   shadows: {
-    outline: '0 0 0 3px rgba(44, 197, 210, 0.6)',
+    outline: "0 0 0 3px rgba(44, 197, 210, 0.6)",
   },
   components: {
     Checkbox: {
       baseStyle: {
         control: {
-          border: '1px solid',
-          borderColor: 'brand.300',
+          border: "1px solid",
+          borderColor: "brand.300",
         },
       },
     },
@@ -31,7 +31,7 @@ export const theme = extendTheme({
       baseStyle: {
         field: {
           _focus: {
-            borderColor: 'brand.500',
+            borderColor: "brand.500",
           },
         },
       },
@@ -39,37 +39,37 @@ export const theme = extendTheme({
     Button: {
       variants: {
         submit: {
-          color: 'white',
-          bg: 'brand.500',
+          color: "white",
+          bg: "brand.500",
           _hover: {
-            bg: 'brand.500',
+            bg: "brand.500",
           },
           _active: {
-            bg: 'brand.500',
+            bg: "brand.500",
           },
         },
         pin: {
-          color: 'gray.200',
-          bg: 'transparent',
+          color: "gray.200",
+          bg: "transparent",
           _hover: {
-            color: 'brand.300',
-            bg: 'transparent',
+            color: "brand.300",
+            bg: "transparent",
           },
           _active: {
-            color: 'brand.300',
-            bg: 'transparent',
+            color: "brand.300",
+            bg: "transparent",
           },
         },
         unpin: {
-          color: 'brand.300',
-          bg: 'transparent',
+          color: "brand.300",
+          bg: "transparent",
           _hover: {
-            color: 'brand.300',
-            bg: 'transparent',
+            color: "brand.300",
+            bg: "transparent",
           },
           _active: {
-            color: 'brand.300',
-            bg: 'transparent',
+            color: "brand.300",
+            bg: "transparent",
           },
         },
       },

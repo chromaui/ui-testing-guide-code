@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Box, Heading } from '@chakra-ui/react';
-import { Icon } from '@chakra-ui/react';
-import { TaskList } from './components/TaskList';
-import { EmptyState } from './components/EmptyState';
-import { useTasks } from './useTasks';
+import React from "react";
+import PropTypes from "prop-types";
+import { Box, Heading } from "@chakra-ui/react";
+import { Icon } from "@chakra-ui/react";
+import { TaskList } from "./components/TaskList";
+import { EmptyState } from "./components/EmptyState";
+import { useTasks } from "./useTasks";
 
 const FrownIcon = (props) => (
   <Icon
@@ -26,15 +26,15 @@ export const InboxScreen = ({ error }) => {
   const [tasks, dispatch] = useTasks();
 
   const archiveTask = (archive, id) => {
-    dispatch({ type: archive ? 'ARCHIVE_TASK' : 'INBOX_TASK', id });
+    dispatch({ type: archive ? "ARCHIVE_TASK" : "INBOX_TASK", id });
   };
 
   const togglePinTask = (state, id) => {
-    dispatch({ type: state === 'TASK_PINNED' ? 'INBOX_TASK' : 'PIN_TASK', id });
+    dispatch({ type: state === "TASK_PINNED" ? "INBOX_TASK" : "PIN_TASK", id });
   };
 
   const editTitle = (title, id) => {
-    dispatch({ type: 'EDIT_TITLE', id, title });
+    dispatch({ type: "EDIT_TITLE", id, title });
   };
 
   if (error) {
@@ -56,7 +56,7 @@ export const InboxScreen = ({ error }) => {
           fontSize="lg"
           lineHeight="8"
           color="brand.500"
-          textAlign={['center', 'center', 'left']}
+          textAlign={["center", "center", "left"]}
         >
           Taskbox
         </Heading>

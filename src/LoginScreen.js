@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 import {
   chakra,
   Box,
@@ -11,7 +11,7 @@ import {
   FormLabel,
   Input,
   Stack,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 
 const LoginForm = ({ onSubmit, ...props }) => (
   <chakra.form

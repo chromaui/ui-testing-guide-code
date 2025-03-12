@@ -14,6 +14,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "^5.0.1",
+    "styled-components": "^6.1.15",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -23,23 +24,9 @@
     "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test-storybook": "test-storybook"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ],
-    "overrides": [
-      {
-        "files": [
-          "**/*.stories.*"
-        ],
-        "rules": {
-          "import/no-anonymous-default-export": "off"
-        }
-      }
-    ]
+    "test-storybook": "test-storybook",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
+    "lint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx src"
   },
   "browserslist": {
     "production": [
@@ -55,6 +42,7 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3",
+    "@eslint/js": "^9.22.0",
     "@storybook/addon-actions": "^8.6.4",
     "@storybook/addon-essentials": "^8.6.4",
     "@storybook/addon-interactions": "^8.6.4",
@@ -65,9 +53,15 @@
     "@storybook/react-webpack5": "^8.6.4",
     "@storybook/test": "^8.6.4",
     "@storybook/test-runner": "^0.22.0",
+    "eslint": "^9.22.0",
+    "eslint-plugin-react": "^7.37.4",
+    "globals": "^16.0.0",
     "msw": "^2.7.3",
     "msw-storybook-addon": "^2.0.4",
-    "storybook": "^8.6.4"
+    "storybook": "^8.6.4",
+    "prettier" : "3.5.3",
+    "eslint-config-prettier" : "10.1.1",
+    "eslint-plugin-prettier" : "5.2.3"
   },
   "msw": {
     "workerDirectory": [

@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Flex, Text } from '@chakra-ui/react';
+import React from "react";
+import PropTypes from "prop-types";
+import { Flex, Text } from "@chakra-ui/react";
 
 export const EmptyState = ({ Icon, title, subtitle, ...props }) => (
   <Flex
